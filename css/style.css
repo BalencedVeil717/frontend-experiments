@@ -1,43 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&display=swap");
+
+@font-face {
+  font-family: "ShareTechMono";
+  src: url("../fonts/ShareTechMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Betatron";
+  src: url("../fonts/Betatron-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: "SharetechMono";
 }
-body {
-  height: 100vh;
+html,body {
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    #03254c,
-    #1167b1,
-    #187bcd,
-    #2a9df4,
-    #aed3e5
+  background: radial-gradient(
+    ellipse at center,
+    #011124,
+    #021e35,
+    #042a46,
+    #053757,
+    #064368,
+    #085079,
+    #095c8a,
+    #0a699b,
+    #0c75ac,
+    #0d82bd
   );
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  max-height: 95%;
-  max-width: 70%;
+  justify-content: space-evenly;
+  gap: 2rem;
+  width: min-content;
   background: #03122e;
-  border: 15px solid #03122e;
+  border: 0.6rem solid #0077ff22;
   border-radius: 7px;
   margin: 20px 0px;
-  outline: 2px solid skyblue;
-  display: none;
+  padding: 1rem;
 }
 .heading {
-  width: 97%;
-  margin-top: 5px;
+  width: 100%;
   background-color: #006cff;
   color: black;
   font-weight: 600;
@@ -45,22 +62,18 @@ body {
   border-radius: 7px;
 }
 .heading p {
-  font-family: "MuseoModerno", cursive;
+  font-family: "Betatron", cursive;
   font-size: 30px;
 }
-.count {
-  min-width: 97%;
-  min-height: 30px;
-}
 .calcbox {
-  width: 97%;
+  width: 100%;
   min-height: auto;
-  max-height: 350px;
+  max-height: 20rem;
   padding: 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
   background: #2b88a8;
   border-radius: 7px;
 }
@@ -76,7 +89,7 @@ body {
 }
 .calcbox .collector .inputs {
   border-radius: 10px 0 10px 0;
-  width: 97%;
+  width: 100%;
   height: 40px;
   background: skyblue;
   display: flex;
@@ -126,7 +139,7 @@ body {
   background-color: skyblue;
 }
 .declbox {
-  width: 97%;
+  width: 100%;
   background: #ee2424;
   min-height: auto;
   max-height: 200px;
@@ -142,7 +155,7 @@ body {
 .declbox h1 {
   padding: 5px;
   background: #670755;
-  width: 97%;
+  width: 100%;
   color: #00ff9d;
   border: 2px solid #18bcdd;
   border-radius: 10px;
@@ -157,7 +170,7 @@ body {
   box-shadow: 0px 5px 10px orange;
   padding: 5px;
   border-radius: 5px;
-  width: 97%;
+  width: 100%;
   width: 100%;
   height: 40px;
   position: relevant;
@@ -209,216 +222,5 @@ body {
   .button {
     font-size: 24px;
     min-width: 120px;
-  }
-}
-.loader .loader_cogs p {
-  margin: 0 auto;
-  font-size: 18px;
-}
-.loader {
-  height: 100%;
-  margin: auto;
-  width: 400px;
-  position: fixed;
-}
-.loader .loader_cogs {
-  width: 100px;
-  height: 100px;
-  top: -120px !important;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.loader .loader_cogs .COGfirst {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  -webkit-transform-origin: 50px 50px;
-  transform-origin: 50px 50px;
-  -webkit-animation: rotate 2s infinite linear;
-  animation: rotate 2s infinite linear;
-}
-.loader .loader_cogs .COGfirst div:nth-of-type(1) {
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-.loader .loader_cogs .COGfirst div:nth-of-type(2) {
-  -webkit-transform: rotate(60deg);
-  transform: rotate(60deg);
-}
-.loader .loader_cogs .COGfirst div:nth-of-type(3) {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.loader .loader_cogs .COGfirst div.firstPart {
-  width: 100px;
-  border-radius: 15px;
-  position: absolute;
-  height: 100px;
-  background: yellow;
-}
-.loader .loader_cogs .COGfirst div.firstHole {
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background: skyblue;
-  position: absolute;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.loader .loader_cogs .COGsecond {
-  position: relative;
-  width: 80px;
-  -webkit-transform: rotate(16deg);
-  transform: rotate(16deg);
-  top: 28px;
-  -webkit-transform-origin: 40px 40px;
-  transform-origin: 40px 40px;
-  animation: rotate_left 1.5s 0.1s infinite reverse linear;
-  left: -24px;
-  height: 80px;
-}
-.loader .loader_cogs .COGsecond div:nth-of-type(1) {
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-.loader .loader_cogs .COGsecond div:nth-of-type(2) {
-  -webkit-transform: rotate(60deg);
-  transform: rotate(60deg);
-}
-.loader .loader_cogs .COGsecond div:nth-of-type(3) {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.loader .loader_cogs .COGsecond div.secondPart {
-  width: 80px;
-  border-radius: 10px;
-  position: absolute;
-  height: 80px;
-  background: orange;
-}
-.loader .loader_cogs .COGsecond div.secondHole {
-  width: 40px;
-  height: 40px;
-  border-radius: 30px;
-  background: cyan;
-  position: absolute;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.loader .loader_cogs .COGthird {
-  position: relative;
-  width: 60px;
-  top: -65px;
-  -webkit-transform-origin: 30px 30px;
-  transform-origin: 30px 30px;
-  -webkit-animation: rotate_left 1s 0.4s infinite linear;
-  animation: rotate_left 1s 0.4s infinite linear;
-  -webkit-transform: rotate(4deg);
-  transform: rotate(4deg);
-  left: 79px;
-  height: 60px;
-}
-.loader .loader_cogs .COGthird div:nth-of-type(1) {
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-.loader .loader_cogs .COGthird div:nth-of-type(2) {
-  -webkit-transform: rotate(60deg);
-  transform: rotate(60deg);
-}
-.loader .loader_cogs .COGthird div:nth-of-type(3) {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.loader .loader_cogs .COGthird div.thirdPart {
-  width: 60px;
-  border-radius: 8px;
-  position: absolute;
-  height: 60px;
-  background: red;
-}
-.loader .loader_cogs .COGthird div.thirdHole {
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background: blue;
-  position: absolute;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes rotate_left {
-  from {
-    -webkit-transform: rotate(16deg);
-    transform: rotate(16deg);
-  }
-  to {
-    -webkit-transform: rotate(376deg);
-    transform: rotate(376deg);
-  }
-}
-@keyframes rotate_left {
-  from {
-    -webkit-transform: rotate(16deg);
-    transform: rotate(16deg);
-  }
-  to {
-    -webkit-transform: rotate(376deg);
-    transform: rotate(376deg);
-  }
-}
-@-webkit-keyframes rotate_right {
-  from {
-    -webkit-transform: rotate(4deg);
-    transform: rotate(4deg);
-  }
-  to {
-    -webkit-transform: rotate(364deg);
-    transform: rotate(364deg);
-  }
-}
-@keyframes rotate_right {
-  from {
-    -webkit-transform: rotate(4deg);
-    transform: rotate(4deg);
-  }
-  to {
-    -webkit-transform: rotate(364deg);
-    transform: rotate(364deg);
   }
 }
