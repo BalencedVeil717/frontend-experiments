@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A curated launchpad for interactive front-end experiments.">
+  <title>Field Notes — Front-end experiments</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Field Notes home">
+      <span class="brand-mark">FN</span>
+      <span><strong>Field Notes</strong><small>front-end experiments</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a href="#explore">Explore</a>
+      <a href="#about">About the archive</a>
+      <a class="github-link" href="https://github.com/BalencedVeil717/frontend-experiments" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> An evolving collection / 2026</p>
+        <h1 id="hero-title">Small ideas,<br><em>sharply made.</em></h1>
+        <p class="hero-intro">A guided way through a growing archive of playful interfaces, useful tools, and visual experiments. Pick a direction and start exploring.</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="surprise-button" type="button">Take me somewhere <span aria-hidden="true">→</span></button>
+          <a class="text-link" href="#explore">Browse everything <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Abstract illustration of connected experiments">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="art-core"><span>✦</span></div>
+        <span class="art-label label-one">play</span>
+        <span class="art-label label-two">make</span>
+        <span class="art-label label-three">learn</span>
+      </div>
+    </section>
+
+    <section class="stats-bar" aria-label="Archive overview">
+      <div><strong>05</strong><span>collections</span></div>
+      <div><strong>07</strong><span>live experiments</span></div>
+      <div><strong>∞</strong><span>ways to wander</span></div>
+      <p>Built with curiosity,<br>not a content calendar.</p>
+    </section>
+
+    <section class="explore-section" id="explore" aria-labelledby="explore-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The archive</p>
+          <h2 id="explore-title">Where do you want<br>to go <em>today?</em></h2>
+        </div>
+        <p class="section-note">Every project is a doorway.<br>There is no wrong first click.</p>
+      </div>
+
+      <div class="controls" aria-label="Filter projects">
+        <div class="filter-list" role="group" aria-label="Filter by category">
+          <button class="filter-button active" data-filter="all" type="button">All work <span>07</span></button>
+          <button class="filter-button" data-filter="play" type="button">Play <span>02</span></button>
+          <button class="filter-button" data-filter="tools" type="button">Useful tools <span>02</span></button>
+          <button class="filter-button" data-filter="visual" type="button">Visual studies <span>03</span></button>
+        </div>
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="project-search" type="search" placeholder="Search the archive" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card featured" data-category="visual" data-search="astrabloom astrology horoscope cosmic gentle">
+          <div class="card-visual astra-visual">
+            <span class="visual-tag">Featured / 01</span>
+            <div class="star-field" aria-hidden="true">✦　·　✧<br>　✧　·　✦</div>
+            <span class="visual-caption">Astra<br><em>Bloom</em></span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Visual study</span><span>01</span></div>
+            <h3>AstraBloom</h3>
+            <p>A soft, playful astrology experience for everyday clarity and cosmic curiosity.</p>
+            <a class="card-link" href="./AstraBloom/index.html">Enter experience <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tools" data-search="webkit v2 calculator clock calendar music utility">
+          <div class="card-visual webkit-two-visual">
+            <span class="visual-tag">Utility suite / 02</span>
+            <div class="window-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="visual-caption mono">WEBKIT<br><em>V2</em></span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Useful tool</span><span>02</span></div>
+            <h3>Webkit v2</h3>
+            <p>A colorful desktop of calculator, clock, calendar, and music tools.</p>
+            <a class="card-link" href="./webkit-v2/index.html">Open toolkit <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tools" data-search="webkit v1 calculator clock calendar utility">
+          <div class="card-visual webkit-one-visual">
+            <span class="visual-tag">Utility suite / 03</span>
+            <div class="dial" aria-hidden="true"><b></b><i></i></div>
+            <span class="visual-caption mono">WEBKIT<br><em>V1</em></span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Useful tool</span><span>03</span></div>
+            <h3>Webkit v1</h3>
+            <p>The original multi-tool playground: practical, tactile, and full of character.</p>
+            <a class="card-link" href="./webkit-v1/index.html">Open toolkit <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="visual" data-search="age calculator time precision">
+          <div class="card-visual age-visual">
+            <span class="visual-tag">Time study / 04</span>
+            <span class="age-number" aria-hidden="true">24<br><small>years</small></span>
+            <span class="visual-caption">time,<br><em>measured.</em></span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Visual study</span><span>04</span></div>
+            <h3>Age Calculator</h3>
+            <p>A precise, simple calculator that counts the distance between two moments.</p>
+            <a class="card-link" href="./age-calculator/index.html">Calculate time <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="play" data-search="custom cursor learning html interaction">
+          <div class="card-visual cursor-visual">
+            <span class="visual-tag">Learning HTML / 05</span>
+            <div class="cursor-shape" aria-hidden="true"></div>
+            <span class="visual-caption">follow<br><em>the feeling.</em></span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Play</span><span>05</span></div>
+            <h3>Custom Cursor</h3>
+            <p>A tiny interaction study about movement, attention, and the joy of a good hover.</p>
+            <a class="card-link" href="./Learning-HTML/custom_cursor/index.html">Try the cursor <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="play" data-search="3d tilting card learning html interaction">
+          <div class="card-visual tilt-visual">
+            <span class="visual-tag">Learning HTML / 06</span>
+            <div class="tilt-card" aria-hidden="true"><span>hover<br>me</span></div>
+            <span class="visual-caption">a little<br><em>perspective.</em></span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Play</span><span>06</span></div>
+            <h3>3D Tilting Card</h3>
+            <p>A study in depth and motion, made from a small card with a big point of view.</p>
+            <a class="card-link" href="./Learning-HTML/3d_tilting_card/index.html">Tilt into it <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card wide-card" data-category="visual" data-search="learning html experiments directory">
+          <div class="card-visual learning-visual">
+            <span class="visual-tag">Collection / 07</span>
+            <span class="learning-glyph" aria-hidden="true">{ }</span>
+            <span class="visual-caption">learn by<br><em>making.</em></span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Visual study</span><span>07</span></div>
+            <h3>Learning HTML</h3>
+            <p>The original sandbox: a home for small experiments while learning the language of the web.</p>
+            <a class="card-link" href="./Learning-HTML/index.html">Visit the sandbox <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No experiments match that search. Try another path.</p>
+    </section>
+
+    <section class="guide" id="about" aria-labelledby="guide-title">
+      <div>
+        <p class="eyebrow">A note from the maker</p>
+        <h2 id="guide-title">Follow the thread,<br><em>not the map.</em></h2>
+      </div>
+      <div class="guide-copy">
+        <p>This archive is a snapshot of learning in public — from useful utilities to tiny moments of delight. The projects are deliberately different, but they share one rule: make the next interaction worth finding.</p>
+        <a class="text-link" href="https://github.com/BalencedVeil717/frontend-experiments" target="_blank" rel="noreferrer">See the source on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Field Notes © 2026</span>
+    <span>Made one experiment at a time <b>✦</b></span>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
