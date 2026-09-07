@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta property="og:title" content="Age Calculator" />
+    <meta
+      property="og:description"
+      content="Easy to operate age calculator with precision upto 1 second."
+    />
+    <meta
+      property="og:url"
+      content="https://balencedveil717.github.io/age-calculator/"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/BalencedVeil717/age-calculator/3f0e772ebda187d7f493e31dc56916cf85c0fcd9/preview.jpeg"
+    />
+    <meta property="og:image:alt" content="Calculator" />
+    <meta name="theme-color" content="#87fe00" />
+    <title>Age-Calculator</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="heading">
+        <p>AGE CALCULATOR</p>
+      </div>
+      <div class="calcbox">
+        <h3>Enter Your DOB Below</h3>
+        <div class="collector">
+          <div class="inputs">
+            <p>Date</p>
+            <input type="date" id="date" value="2021-01-01" />
+          </div>
+          <div class="inputs">
+            <p>Time</p>
+            <input type="time" id="time" value="01:00:00" />
+          </div>
+        </div>
+        <div class="target">
+          <h3>Enter Target Date</h3>
+          <input type="date" id="now" />
+        </div>
+        <div class="submit">
+          <button
+            class="button"
+            id="click"
+            onclick="setDateTime()"
+            role="button"
+          >
+            <span class="text">Calculate</span>
+          </button>
+        </div>
+      </div>
+      <div class="declbox">
+        <h1>YOUR AGE IS</h1>
+        <div class="countdown">
+          <p id="years">...</p>
+          <p id="months">...</p>
+          <p id="days">...</p>
+          <p id="hours">...</p>
+          <p id="minutes">...</p>
+          <p id="seconds">...</p>
+        </div>
+      </div>
+    </div>
+    <div class="hide"></div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

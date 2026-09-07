@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&display=swap");
+
+@font-face {
+  font-family: "ShareTechMono";
+  src: url("../fonts/ShareTechMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Betatron";
+  src: url("../fonts/Betatron-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SharetechMono";
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    ellipse at center,
+    #011124,
+    #021e35,
+    #042a46,
+    #053757,
+    #064368,
+    #085079,
+    #095c8a,
+    #0a699b,
+    #0c75ac,
+    #0d82bd
+  );
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  width: min-content;
+  background: #03122e;
+  border: 0.6rem solid #0077ff22;
+  border-radius: 7px;
+  margin: 20px 0px;
+  padding: 1rem;
+}
+.heading {
+  width: 100%;
+  background-color: #006cff;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 7px;
+}
+.heading p {
+  font-family: "Betatron", cursive;
+  font-size: 30px;
+}
+.calcbox {
+  width: 100%;
+  min-height: auto;
+  max-height: 20rem;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #2b88a8;
+  border-radius: 7px;
+}
+.calcbox .collector {
+  min-width: 70%;
+  max-width: 90%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.calcbox .collector .inputs {
+  border-radius: 10px 0 10px 0;
+  width: 100%;
+  height: 40px;
+  background: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  overflow: hidden;
+  box-shadow: 0 0 5px gray;
+}
+.calcbox .collector .inputs input {
+  background: none;
+  padding: 5px;
+  margin-right: 3px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px 0 10px 10px;
+  width: 60%;
+}
+.calcbox .collector .inputs p {
+  font-size: 25px;
+  width: 40%;
+  height: 80%;
+  background-color: #9376fa;
+  border-radius: 10px 10px 10px 0;
+  margin-left: 2%;
+  text-align: center;
+}
+.calcbox .target {
+  min-width: 50%;
+  max-width: 70%;
+  height: 70px;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 0;
+}
+.calcbox .target input {
+  height: 50px;
+  width: 80%;
+  border-radius: 2px;
+  text-align: center;
+  border: 2px solid black;
+  box-shadow: 0 0 0 5px skyblue;
+  background-color: skyblue;
+}
+.declbox {
+  width: 100%;
+  background: #ee2424;
+  min-height: auto;
+  max-height: 200px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  border-radius: 7px;
+}
+.declbox h1 {
+  padding: 5px;
+  background: #670755;
+  width: 100%;
+  color: #00ff9d;
+  border: 2px solid #18bcdd;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.declbox .countdown {
+  font-family: monospace;
+  font-size: 20px;
+  background-color: yellow;
+  color: black;
+  box-shadow: 0px 5px 10px orange;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  width: 100%;
+  height: 40px;
+  position: relevant;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+.declbox .countdown p {
+  font-size: 20px;
+  width: 50px;
+  background-color: orange;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 2px 2px black;
+}
+.button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 33%, red);
+  border: 0;
+  border-radius: 50px;
+  color: #ffffff;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 2px;
+}
+.button:active,
+.button:hover {
+  outline: 0;
+}
+.button span {
+  background-color: rgb(5, 6, 45);
+  padding: 10px 10px;
+  border-radius: 50px;
+  width: 100%;
+  height: 80%;
+}
+.button:hover span {
+  background: linear-gradient(90deg, #af40ff, #1d41f6, #ff0000);
+}
+@media (min-width: 768px) {
+  .button {
+    font-size: 24px;
+    min-width: 120px;
+  }
+}
