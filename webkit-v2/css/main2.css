@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+ outline: none;
+ box-sizing: border-box;
+}
+  
+   .clock{
+    height: 320px;
+    width: 320px;
+    background-color: rgba(255,255,255,0.06);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-radius: 50%;
+      position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
+    box-shadow: 0 0 50px rgb(65, 2, 75);
+    border: 2px solid rgba(255,255,255,0.1);
+    margin-right: 100px;
+}
+img{
+    opacity: 0.6;
+}
+.hand{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,0.2);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 5px;
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+}
+.hour{
+    height: 60px;
+    width: 10px;
+    top: 100px;
+}
+.minute{
+    height: 80px;
+    width: 5px;
+    top: 80px;
+}
+.seconds{
+    height: 90px;
+    width: 3px;
+    top: 70px;
+}
+
+@media screen and (min-width: 451px) {
+  a{
+    font-size: 18px;
+     padding:8px 12px 8px 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  a{
+    font-size: 12px;
+     padding:5px 8px 5px 8px;
+  }
+}
+
+.projectname{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid blue;
+    padding: 5px;
+}
+
+.main2{
+    display: none;
+}
+

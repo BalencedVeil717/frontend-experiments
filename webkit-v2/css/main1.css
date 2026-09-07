@@ -1,0 +1,109 @@
+.calculator {
+  width: 290px;
+  height: 500px;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 50px rgb(65, 2, 75);
+  border: 1px solid rgb(15, 148, 225);
+  border-radius: 30px;
+  position: relative;
+  padding: 10px;
+  margin-right: 100px;
+}
+
+.calculator > .result-section {
+  height: 124px;
+  background: #05386b35;
+  border: 3px solid rgb(5, 119, 134);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px;
+  position: relative;
+}
+
+.calculator > .result-section input {
+  background: transparent;
+  color: #0f044d;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  padding: 10px;
+  width: calc(100% - 20px);
+  position: absolute;
+  text-align: right;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.calculator > .result-section .result-value {
+  top: 10px;
+  font-size: 2.1rem;
+}
+
+.calculator > .result-section .result-input {
+  bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.calculator > .buttons-section {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  position: absolute;
+  width: calc(100% - 20px);
+  bottom: 0;
+}
+
+.calculator > .buttons-section .row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  background: #11197836;
+  color: #260554;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.calculator .btn:hover {
+  box-shadow: 0 2px 20px #9b1a90;
+  transition: all 0.3s ease;
+}
+
+.calculator .btn:active {
+  box-shadow: 0 2px 30px #01343a;
+  transition: all 0.3s ease;
+}
+
+.calculator .btn.equals {
+  width: 112px;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(45deg, #00d0ff, #468be5, #0e5997, #051958);
+  align-items: center;
+}
+
+.calculator .backspace {
+  font-size: 20px;
+  margin-right: 2px;
+}
+
+
+@media (max-width: 767px) {
+  h2 {
+    top: 16px;
+    min-width: 300px;
+    font-size: 18px;
+  }
+}
+
