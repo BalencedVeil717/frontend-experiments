@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator V2</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main1.css">
+    <link rel="stylesheet" href="./css/main2.css">
+    <link rel="stylesheet" href="./css/main3.css">
+    <link rel="stylesheet" href="./css/main4.css">
+    <link rel="shortcut icon" href="./resources/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <button type="button" id="change1" class="change1"><b>CALCULATOR</b></button>
+    <button type="button" id="change2" class="change2"><b>CLOCK</b></button>
+    <button type="button" id="change3" class="change3"><b>CALENDAR</b></button>
+    <div class="main1">
+        <h1 class="name"><b>CALCULATOR</b></h1>
+        <form name="form" onsubmit="getResult()">
+            <div class="calculator">
+                <div class="result-section">
+                    <input class="result-value" type="text" name="resultValue" />
+                    <input class="result-input" type="text" name="resultInput" />
+                </div>
+                <div class="buttons-section">
+                    <div class="row">
+                        <div class="btn" onclick="resetInput()">C</div>
+                        <div class="btn" onclick="handleBackspace()">
+                            <span class="material-icons backspace"> backspace </span>
+                        </div>
+                        <div class="btn" onclick="calc('%')">%</div>
+                        <div class="btn" onclick="calc('/')">÷</div>
+                    </div>
+                    <div class="row">
+                        <div class="btn" onclick="calc('7')">7</div>
+                        <div class="btn" onclick="calc('8')">8</div>
+                        <div class="btn" onclick="calc('9')">9</div>
+                        <div class="btn" onclick="calc('*')">
+                            <span style="margin-bottom: 4px">x</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btn" onclick="calc('4')">4</div>
+                        <div class="btn" onclick="calc('5')">5</div>
+                        <div class="btn" onclick="calc('6')">6</div>
+                        <div class="btn" onclick="calc('-')">-</div>
+                    </div>
+                    <div class="row">
+                        <div class="btn" onclick="calc('1')">1</div>
+                        <div class="btn" onclick="calc('2')">2</div>
+                        <div class="btn" onclick="calc('3')">3</div>
+                        <div class="btn" onclick="calc('+')">+</div>
+                    </div>
+                    <div class="row">
+                        <div class="btn" onclick="calc('0')">0</div>
+                        <div class="btn" onclick="calc('.')">.</div>
+                        <div class="btn equals" onclick="getResult()">=</div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="main2">
+        <h1 class="name"><b>CLOCK-1</b></h1>
+        <h1 class="name clocktag" id="change4"><b>CLOCK-2</b></h1>
+        <div class="clock">
+            <img src="./resources/template.svg">
+            <div class="hour hand" id="hour"></div>
+            <div class="minute hand" id="minute"></div>
+            <div class="seconds hand" id="seconds"></div>
+        </div>
+    </div>
+    <div class="main3">
+        <h1 class="name"><b>CALENDAR</b></h1>
+        <div class="box">
+            <div class="container">
+                <div id="calendar">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main4">
+        <h1 class="name" id="change5"><b>CLOCK-1</b></h1>
+        <h1 class="name clocktag" id="change4"><b>CLOCK-2</b></h1>
+        <!-- <div class="container"> -->
+        <div class="clock2">
+            <div id="day"></div>
+            <div class="wrapper">
+                <div id="time"></div>
+                <div id="midday"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="card card-1">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="card__title">Please Turn On Desktop Mode If You Are On Mobile And Can't See All The Objects Clearly.</h2>
+        <p class="card__apply">
+            <button class="card__link" id="ok">OK<i class="fas fa-arrow-right"></i></button>
+        </p>
+    </div>
+    <div class="buy">
+        <a class="suppoprt-me" href="https://www.buymeacoffee.com/balenced" target="_blank"><img src="./resources/coffee.png"></a>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/main1.js"></script>
+<script src="./js/main2.js"></script>
+<script src="./js/main3.js"></script>
+<script src="./js/main4.js"></script>
+<script>
+    dycalendar.draw({
+        target: '#calendar',
+        type: 'month',
+        dayformat: 'full',
+        monthformat: 'full',
+        highlighttargetdate: true,
+        prevnextbutton: 'show'
+    })
+</script>
+</body>
+
+</html>
